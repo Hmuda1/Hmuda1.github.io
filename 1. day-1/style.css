@@ -1,0 +1,26 @@
+div{
+  background: orange;
+  padding: 15px;
+  border: 2px solid black;
+  font-family: 'Verdana';
+}
+
+h1{
+  background: cyan;
+  margin: 50px 750px 80px 750px;
+  text-align:center;
+  border: 2px solid black;
+}
+ 
+h2 {
+  color: #0000FF;
+  background: red;
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-right:500px;
+  border: 2px solid black;
+}
+p{
+  margin: 0;
+}

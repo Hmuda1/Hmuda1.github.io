@@ -1,0 +1,21 @@
+p{
+  margin: 0 5px;
+}
+
+a{
+  font-family: 'Open Sans', sans-serif;
+  color: green;
+}
+
+a:hover{
+  color: lime;
+  text-decoration: none;
+}
+
+a:active{
+
+}
+
+a:visited{
+
+}

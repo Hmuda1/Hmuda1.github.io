@@ -1,0 +1,42 @@
+header{
+  background: purple;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+button{
+  background: cyan;
+  height: 30px;
+  justify-content: center;
+  margin: 10px;
+}
+
+div{
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 80px 100px 10px 100px;
+}
+
+main{
+  background: yellow;
+  height: 500px;
+  flex-grow: 4;
+}
+
+aside{
+  background: green;
+  height: 500px;
+  flex-grow: 1;
+}
+
+footer{
+  background: lightgrey;
+  height: 80px;
+  margin: 0 100px;
+}

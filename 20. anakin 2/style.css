@@ -1,0 +1,131 @@
+/* A HTML-ben a blockquote elemeket es a szoveges profil kepet bele tettem kulon-kulon 'aside' dobozokba, mig a fo szoveges tartalmat a negy logikus szekcio alapjan szinten kulon-kulon belepakolgattam a sajat 'main' dobozaikba. Azutan az osszetartozo elemeket egybe fogtam egy-egy 'div' elemmel. Probaltam ugy formazni a HTML kodot, hogy egyertelmu legyen mi hova tartozik. De ha segit akkor a HTML mezo jobb felso-sarkaban a nyillal ossze-csukhatjatok az osszes elemet a 'Fold all' opcioval, utana pedig egyenkent ki tudjatok nyitogatni oket a kis kek nilakkal ami atlathatobba teszi, hogy mi hova tarozik. */
+
+
+body{
+  margin: 0; /* Csak azert kellett, hogy a lap aljarol eltuntessek egy kis ures margot, igy a tartalom szepen igazodik az oldalhoz */
+}
+
+nav{ /* A legfelso linkeket tartalmazo doboz formazasa */
+  z-index: 1; /* Ez biztositja, hogy a tobbi elem nem fogja eltakarni */
+  display: flex;
+  justify-content: space-around; /* Minden oldalrol hagy helyet a linkek kozott */
+  align-items: center;
+  background: #222;
+  height: 100px;
+  width: 1000px;
+  position: fixed;
+  top: 0;
+  left: 50%; /* Az elem bal oldalat az ablak kozepere igazitja */
+  margin-left: -500px; /* Mivel 1000px szeles az egesz elem, igy hogy tenyleg kozepen legyen, az ossz-hosszanak felevel vissza kell huzni jobbra */
+}
+
+nav a{ /* A 'nav' elemben levo linkek formazasa */
+  text-decoration: none;
+  color: beige;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 40px;
+}
+
+nav a:hover{ /* Ez csak hogy jobban lehessen latni hogy melyik link felett van az eger kurzor, nem volt a feladat resze */
+  color: white;
+  text-shadow: 0 0 25px beige;
+}
+
+main{ /* Ezekben van a fo szoveges tartalom */
+  width: 700px;  /* Az osszes jobb oldali szoveges tartalom doboza 700px szeles lesz */
+  padding-bottom: 30px; /* Csak helyet hagyok a kovetkezo szekcio elott */
+}
+
+aside{ /* Ezekben van a profilkep es a harom idezet */
+  width: 300px; /* Az osszes bal oldali idezet es a fenti profil-kep doboza 300px szeles lesz, ami a szovegek 700px-es szelessegevel pont igazodni fog a fejlec 1000px szelessegehez */
+}
+
+div{ /* Ezekben vannak osszefogva a 'main' 'aside' parok */
+  margin: auto; /* Kozepre igazitja az egesz dobozt */
+  width: 1000px;  /* Igazodik a fenti linkeket tartalmazo nav elem szelessegehez*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header{ /* Maradvany kod az 1.0-as verziobol, de azert hasznat tudtam venni :) */
+  position:relative; /* Ehez fognak a kepen lathato szovegek igazodni mivel ez a "parent" elemjuk */
+}
+
+#bio{ /* Ez csak a legfelso 'div' doboz, amiben a profilkep talalhato. */
+  font-family: 'Abril Fatface', cursive;
+  margin-top: 100px; /* Hogy az elso 'div' elem bekeruljon a 'nav' elem ala. */
+  padding-bottom: 40px; /* Csak hogy a szoveges profilkep es a kovetkezo idezet kozott legyen egy kis hely. */
+}
+
+img{ /* A profilkep formazasa */
+  width: 300px;
+  height: 400px;
+  object-fit: cover; /* Ezzel monjuk meg az oldalnak, hogy ne huzza-tolja ossze a kepet, hanem csak a felesleget vagja le */
+}
+
+#hi{ /* Mivel ez a szoveg ket kulonbozo betumerettel dologozik, ezert nekem konnyebb volt kulonallo elemekre bontani */
+  position:absolute; /* Ezzel monjuk neki, hogy ha van "parent" elemben "relative" pozicio megadva akkor ahhoz igazodjon */
+  bottom: 100px; /* Alulrol szamitva milyen messze tolodjon el */
+  left: 25px;  /* Ugyanez balrol */
+  font-size: 30px;
+}
+
+#name{ /* Lasd: #hi */
+  position:absolute; /* Mint a #hi ID-s elemnel */
+  bottom: -75px; /* Ezt nekem tulsagosan fel rakta, igy hogy lejjebb tudjam tenni negativ erteket kellett megadnom */
+  left: 25px;
+  font-size: 60px;
+}
+
+blockquote{ /* Az idezetek dobozanak formazasa */
+  width: 200px; /* Mivel kellett 'padding' hogy ne toltse ki teljesen az idezet az elemet, igy a tenyleges dobozt 100px-el kisebbre mereteztem, hogy az 50px-es paddinggel egyutt megkapjam a 300px-es szelesseget (50px+200px+50px) */
+  position: relative; /* Kell az idezojeles pszeudo elem elhelyezesehez */
+  background: #222;
+  padding: 50px; /* Ez kellett a fenti okok miatt */
+  color: beige;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 40px;
+  margin: 0;
+}
+
+blockquote::before { /* Itt helyezzuk el a kis idezojelet a doboz sarkaban */
+  content: '“'; /* Ez a karakter fog megjelenni, ide barmit lehetne tenni */
+  color: beige;
+  position: absolute;  /* Nezi, hogy van-e 'relative' pozicio megadva a 'parent' elemek kozott es ahhoz igazodik */
+  top: -20px;
+  left: 5px;
+  font-size: 100px;
+}
+
+h3, h4, h5, p, ul{ /* Ezek az osszes szoveges elemre igazak szoval eleg egyszer megadni oket, nem kell 5 kulon alkalommal beirkalni. */
+  text-align: justify; /* Sorkizaras, nem kerte a feladat, de nekem bantja a szep-erzekem :) */
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+  margin: 20px 40px;
+  font-size: 18px;
+}
+
+ul{
+  margin: 20px 40px;
+  font-size: 18px;
+  list-style-type: square;
+}
+
+h3{
+  text-transform: uppercase; 
+  font-size: 30px;
+  margin: 40px 30px;
+}
+
+h4{
+  font-size: 20px;
+  margin: 20px 30px 0 30px;
+}
+
+h5{
+  font-size: 14px;
+  margin: 0 30px 20px 30px;
+}
