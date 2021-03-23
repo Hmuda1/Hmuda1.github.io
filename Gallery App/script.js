@@ -29,88 +29,88 @@ const gallery = [
     blurb:
       'An imp preparing to throw a fireball. Picture taken from the game Doom (2016).',
   },
-  // {
-  //   image: 'pics/doom 2.jpg',
-  //   title: 'U wot m8?!',
-  //   blurb:
-  //     'An imp screaming while a revenant looks on. Picture taken from the game Doom (2016).',
-  // },
-  // {
-  //   image: 'pics/ed 1.jpg',
-  //   title: 'Exploration',
-  //   blurb:
-  //     'A lone ship exploring the galaxy. Picture taken from the game Elite: Dangerous.',
-  // },
-  // {
-  //   image: 'pics/jw 1.jpg',
-  //   title: 'Dinosaurs',
-  //   blurb:
-  //     'Dinosaurs roaming their enclosures. Picture taken from the game Jurassic World Evolution.',
-  // },
-  // {
-  //   image: 'pics/kcd 1.jpg',
-  //   title: 'Medieval room',
-  //   blurb:
-  //     'Inside a medieval room. Picture taken from the game Kingdom Come Deliverance.',
-  // },
-  // {
-  //   image: 'pics/mfs 1.jpg',
-  //   title: 'New Zealand',
-  //   blurb:
-  //     'An ICON A5 on a New Zealand meadow. Picture taken from the game Microsoft Flight Simulator.',
-  // },
-  // {
-  //   image: 'pics/mfs 2.jpg',
-  //   title: 'Croatia',
-  //   blurb:
-  //     'An ICON A5 near Tisno, Croatia. Picture taken from the game Microsoft Flight Simulator.',
-  // },
-  // {
-  //   image: 'pics/swj 1.jpg',
-  //   title: 'Finish Him',
-  //   blurb:
-  //     'Cal finishes off an Imperial droid. Picture taken from the game Star Wars Jedi: Fallen Order.',
-  // },
-  // {
-  //   image: 'pics/swj 2.jpg',
-  //   title: 'Show Me The Way',
-  //   blurb:
-  //     'Cal illuminates his way in the darkness with his lightsaber. Picture taken from the game Star Wars Jedi: Fallen Order.',
-  // },
-  // {
-  //   image: 'pics/wf 1.jpg',
-  //   title: 'Excalibur',
-  //   blurb: 'Excalibur taking aim. Picture taken from the game Warframe.',
-  // },
-  // {
-  //   image: 'pics/wf 3.jpg',
-  //   title: 'Ember',
-  //   blurb:
-  //     'Titania posing in front of some lights. Picture taken from the game Warframe.',
-  // },
-  // {
-  //   image: 'pics/wf 4.jpg',
-  //   title: 'Titania',
-  //   blurb:
-  //     'Titania admiring one of her butterflies. Picture taken from the game Warframe.',
-  // },
-  // {
-  //   image: 'pics/wf 5.jpg',
-  //   title: 'Nyx',
-  //   blurb: 'Nyx shooting his pistol. Picture taken from the game Warframe.',
-  // },
-  // {
-  //   image: 'pics/wf 6.jpg',
-  //   title: 'Ember',
-  //   blurb:
-  //     'Ember showing off her powers. Picture taken from the game Warframe.',
-  // },
-  // {
-  //   image: 'pics/bm 1.jpg',
-  //   title: 'Batman',
-  //   blurb:
-  //     'Batman looking over Gotham City. Picture taken from the game Batman: Arkham Knight.',
-  // },
+  {
+    image: 'pics/doom 2.jpg',
+    title: 'U wot m8?!',
+    blurb:
+      'An imp screaming while a revenant looks on. Picture taken from the game Doom (2016).',
+  },
+  {
+    image: 'pics/ed 1.jpg',
+    title: 'Exploration',
+    blurb:
+      'A lone ship exploring the galaxy. Picture taken from the game Elite: Dangerous.',
+  },
+  {
+    image: 'pics/jw 1.jpg',
+    title: 'Dinosaurs',
+    blurb:
+      'Dinosaurs roaming their enclosures. Picture taken from the game Jurassic World Evolution.',
+  },
+  {
+    image: 'pics/kcd 1.jpg',
+    title: 'Medieval room',
+    blurb:
+      'Inside a medieval room. Picture taken from the game Kingdom Come Deliverance.',
+  },
+  {
+    image: 'pics/mfs 1.jpg',
+    title: 'New Zealand',
+    blurb:
+      'An ICON A5 on a New Zealand meadow. Picture taken from the game Microsoft Flight Simulator.',
+  },
+  {
+    image: 'pics/mfs 2.jpg',
+    title: 'Croatia',
+    blurb:
+      'An ICON A5 near Tisno, Croatia. Picture taken from the game Microsoft Flight Simulator.',
+  },
+  {
+    image: 'pics/swj 1.jpg',
+    title: 'Finish Him',
+    blurb:
+      'Cal finishes off an Imperial droid. Picture taken from the game Star Wars Jedi: Fallen Order.',
+  },
+  {
+    image: 'pics/swj 2.jpg',
+    title: 'Show Me The Way',
+    blurb:
+      'Cal illuminates his way in the darkness with his lightsaber. Picture taken from the game Star Wars Jedi: Fallen Order.',
+  },
+  {
+    image: 'pics/wf 1.jpg',
+    title: 'Excalibur',
+    blurb: 'Excalibur taking aim. Picture taken from the game Warframe.',
+  },
+  {
+    image: 'pics/wf 3.jpg',
+    title: 'Ember',
+    blurb:
+      'Titania posing in front of some lights. Picture taken from the game Warframe.',
+  },
+  {
+    image: 'pics/wf 4.jpg',
+    title: 'Titania',
+    blurb:
+      'Titania admiring one of her butterflies. Picture taken from the game Warframe.',
+  },
+  {
+    image: 'pics/wf 5.jpg',
+    title: 'Nyx',
+    blurb: 'Nyx shooting his pistol. Picture taken from the game Warframe.',
+  },
+  {
+    image: 'pics/wf 6.jpg',
+    title: 'Ember',
+    blurb:
+      'Ember showing off her powers. Picture taken from the game Warframe.',
+  },
+  {
+    image: 'pics/bm 1.jpg',
+    title: 'Batman',
+    blurb:
+      'Batman looking over Gotham City. Picture taken from the game Batman: Arkham Knight.',
+  },
 ];
 
 let current = 0;
