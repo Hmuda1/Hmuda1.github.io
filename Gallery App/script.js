@@ -166,6 +166,7 @@ function loadPicture(index) {
   $('#blurb').text(gallery[index].blurb);
   $('.thumb img').css('border', '5px solid slategray');
   $('.thumb img').css('filter', 'grayscale(100%)');
+  $('.thumb img').css('transform', 'scale(1)');
   $(`.hidden`).css('display', 'none');
   $(`.hidden`).css('background', 'slategray');
   $(`.hidden`).css('color', 'white');
