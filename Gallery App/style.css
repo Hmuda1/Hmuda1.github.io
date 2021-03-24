@@ -34,9 +34,9 @@ body {
   background: rgb(112, 128, 144);
   background: linear-gradient(
     0deg,
-    rgba(112, 128, 144, 1) 0%,
+    rgba(112, 128, 144, 1) 10%,
     rgba(255, 255, 255, 1) 50%,
-    rgba(112, 128, 144, 1) 100%
+    rgba(112, 128, 144, 1) 90%
   );
   margin: 0;
   display: flex;
@@ -44,15 +44,16 @@ body {
   justify-content: center;
   width: 30px;
   border-radius: 50px 0 0 50px;
+  box-shadow: inset 0 0 15px black;
 }
 
 #next {
   background: rgb(112, 128, 144);
   background: linear-gradient(
     0deg,
-    rgba(112, 128, 144, 1) 0%,
+    rgba(112, 128, 144, 1) 10%,
     rgba(255, 255, 255, 1) 50%,
-    rgba(112, 128, 144, 1) 100%
+    rgba(112, 128, 144, 1) 90%
   );
   margin: 0;
   display: flex;
@@ -60,6 +61,7 @@ body {
   justify-content: center;
   width: 30px;
   border-radius: 0 50px 50px 0;
+  box-shadow: inset 0 0 15px black;
 }
 
 #picture {
@@ -117,7 +119,7 @@ body {
 }
 
 #slideshow {
-  height: 200px;
+  height: 160px;
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
@@ -125,20 +127,49 @@ body {
   width: inherit;
 }
 
+#slideshow::-webkit-scrollbar {
+  height: 30px;
+}
+
+#slideshow::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 15px black;
+  border-radius: 15px;
+}
+
+#slideshow::-webkit-scrollbar-thumb {
+  background: rgb(112, 128, 144);
+  background: linear-gradient(
+    90deg,
+    rgba(112, 128, 144, 1) 10%,
+    rgba(202, 218, 234, 1) 50%,
+    rgba(112, 128, 144, 1) 90%
+  );
+  box-shadow: inset 0 0 15px black;
+  border-radius: 20px;
+}
+
 #slideshow p {
   margin: 0;
 }
 
 .thumb img {
+  transition: filter 0.5s !important;
   box-shadow: 0px 30px 5px -20px rgba(0, 0, 0, 0.75);
-  width: 200px;
-  height: 100px;
+  width: 140px;
+  height: 60px;
   object-fit: cover;
-  margin: 25px 5px 0 5px;
+  margin: 25px 0 0 0;
   border-radius: 60px;
+  filter: grayscale(100%);
+}
+
+.thumb:hover img {
+  filter: grayscale(0%) !important;
+  transform: scale(1.1);
 }
 
 .thumb {
+  margin: 0 14px;
   display: inline-block;
   white-space: nowrap;
   position: relative;
@@ -150,16 +181,16 @@ body {
   position: absolute;
   background: slategray;
   color: white;
-  bottom: 32px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   font-family: 'Bebas Neue', cursive;
   font-size: 14px;
-  padding: 10px;
+  padding: 2px 10px;
   border-radius: 25px;
   white-space: nowrap;
-  box-shadow: 0px 15px 5px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 15px 5px -5px rgba(0, 0, 0, 0.75);
 }
 
 .thumb:hover .hidden {
