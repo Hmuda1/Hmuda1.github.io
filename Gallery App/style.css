@@ -165,7 +165,7 @@ body {
 
 .thumb:hover img {
   filter: grayscale(0%) !important;
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
 }
 
 .thumb {
