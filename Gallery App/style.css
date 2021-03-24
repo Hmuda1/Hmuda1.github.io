@@ -7,6 +7,9 @@ body {
     rgba(100, 100, 100, 1) 100%
   );
 }
+::selection {
+  background: rgba(0, 0, 0, 0);
+}
 
 #container {
   display: flex;
@@ -14,7 +17,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   margin: 50px auto;
-  width: 90%;
+  width: 100%;
 }
 
 #display {
@@ -38,7 +41,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
+  width: 30px;
   border-radius: 50px 0 0 50px;
 }
 
@@ -54,7 +57,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
+  width: 30px;
   border-radius: 0 50px 50px 0;
 }
 
@@ -104,13 +107,13 @@ body {
 }
 
 #previous img {
-  height: 60px;
-  width: 60px;
+  height: 25px;
+  width: 25px;
 }
 
 #next img {
-  height: 60px;
-  width: 60px;
+  height: 25px;
+  width: 25px;
   transform: rotate(180deg);
 }
 
@@ -142,6 +145,7 @@ body {
 }
 
 .hidden {
+  display: none;
   pointer-events: none;
   position: absolute;
   background: slategray;
