@@ -1,3 +1,5 @@
+'use strict';
+
 const gallery = [
   {
     image: 'pics/cp77 1.png',
@@ -22,6 +24,41 @@ const gallery = [
     title: 'Brigitte',
     blurb:
       'Maman ("Mama") Brigitte, leader of the Voodoo Boyz gang. Picture taken from the game Cyberpunk 2077.',
+  },
+  {
+    image: 'pics/cp77 5.png',
+    title: 'Rogue',
+    blurb:
+      'Rogue listening to Johhny Silverhand. Picture taken from the game Cyberpunk 2077.',
+  },
+  {
+    image: 'pics/cp77 6.png',
+    title: 'Takemura',
+    blurb:
+      'Goro Takemura waiting for V. Picture taken from the game Cyberpunk 2077.',
+  },
+  {
+    image: 'pics/cp77 7.png',
+    title: 'Panam',
+    blurb: 'Panam fixing her car. Picture taken from the game Cyberpunk 2077.',
+  },
+  {
+    image: 'pics/cp77 8.png',
+    title: 'Cyborg',
+    blurb:
+      'A random citizen of Night City. Picture taken from the game Cyberpunk 2077.',
+  },
+  {
+    image: 'pics/cp77 9.png',
+    title: 'Parade Attendant',
+    blurb:
+      'A random citizen of Night City enjoying the Japantown parade. Picture taken from the game Cyberpunk 2077.',
+  },
+  {
+    image: 'pics/cp77 10.png',
+    title: 'NCPD',
+    blurb:
+      'An NCPD officer looking for V. Picture taken from the game Cyberpunk 2077.',
   },
   {
     image: 'pics/doom 1.jpg',
@@ -86,7 +123,7 @@ const gallery = [
     image: 'pics/wf 3.jpg',
     title: 'Ember',
     blurb:
-      'Titania posing in front of some lights. Picture taken from the game Warframe.',
+      'Ember posing in front of some lights. Picture taken from the game Warframe.',
   },
   {
     image: 'pics/wf 4.jpg',
@@ -128,7 +165,13 @@ function loadPicture(index) {
   $('#title').text(gallery[index].title);
   $('#blurb').text(gallery[index].blurb);
   $('.thumb img').css('border', ' 5px solid slategray');
+  $(`.hidden`).css('display', 'none');
+  $(`.hidden`).css('background', 'slategray');
+  $(`.hidden`).css('color', 'white');
   $(`#${index} img`).css('border', ' 5px solid white');
+  $(`#${index} .hidden`).css('display', 'block');
+  $(`#${index} .hidden`).css('background', 'white');
+  $(`#${index} .hidden`).css('color', 'black');
   current = index;
 }
 
@@ -150,3 +193,16 @@ $('#previous').on('click', function () {
 $('#slideshow').on('click', '.thumb', function () {
   loadPicture($(this).attr('id'));
 });
+
+$('.showOnHover').hover(
+  function () {
+    $('#description').fadeIn('fast');
+    $('#title').fadeIn('fast');
+    $('#blurb').fadeIn('fast');
+  },
+  function () {
+    $('#description').fadeOut();
+    $('#title').fadeOut();
+    $('#blurb').fadeOut();
+  }
+);
