@@ -158,6 +158,7 @@ for (let i = 0; i < gallery.length; i++) {
       `<div class='thumb' id="${i}"><img src="${gallery[i].image}"><p class='hidden'>${gallery[i].title}</p></div>`
     )
   );
+  $(`#counter`).append(`<p class='${i}'>.</p>`);
 }
 
 function loadPicture(index) {
@@ -176,6 +177,8 @@ function loadPicture(index) {
   $(`#${index} .hidden`).css('color', 'black');
   $(`#${index} img`).css('filter', 'grayscale(0%)');
   $(`#${index} img`).css('transform', 'scale(1.1)');
+  $(`#counter p`).css('color', 'slategray');
+  $(`.${index}`).css('color', 'white');
   current = index;
 }
 
@@ -200,11 +203,13 @@ $('#slideshow').on('click', '.thumb', function () {
 
 $('.showOnHover').hover(
   function () {
+    $('#counter p').fadeIn('fast');
     $('#description').fadeIn('fast');
     $('#title').fadeIn('fast');
     $('#blurb').fadeIn('fast');
   },
   function () {
+    $('#counter p').fadeOut();
     $('#description').fadeOut();
     $('#title').fadeOut();
     $('#blurb').fadeOut();
