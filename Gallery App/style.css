@@ -45,7 +45,7 @@ body {
   background: linear-gradient(
     0deg,
     darkslategray 10%,
-    lightslategray 50%,
+    white 50%,
     darkslategray 90%
   );
   margin: 0;
@@ -62,7 +62,7 @@ body {
   background: linear-gradient(
     0deg,
     darkslategray 10%,
-    lightslategray 50%,
+    white 50%,
     darkslategray 90%
   );
   margin: 0;
