@@ -165,13 +165,13 @@ function loadPicture(index) {
   $('#photo').attr('src', gallery[index].image);
   $('#title').text(gallery[index].title);
   $('#blurb').text(gallery[index].blurb);
-  $('.thumb img').css('border', '5px solid slategray');
+  $('.thumb img').css('border', '3px solid slategray');
   $('.thumb img').css('filter', 'grayscale(100%)');
   $('.thumb img').css('transform', 'scale(1)');
   $(`.hidden`).css('display', 'none');
   $(`.hidden`).css('background', 'slategray');
   $(`.hidden`).css('color', 'white');
-  $(`#${index} img`).css('border', ' 5px solid white');
+  $(`#${index} img`).css('border', ' 3px solid white');
   $(`#${index} .hidden`).css('display', 'block');
   $(`#${index} .hidden`).css('background', 'white');
   $(`#${index} .hidden`).css('color', 'black');
