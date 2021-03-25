@@ -173,25 +173,15 @@ body {
 
 #slideshow::-webkit-scrollbar-thumb {
   background: slategray;
-  background: linear-gradient(
-    90deg,
-    darkslategray 10%,
-    lightslategray 50%,
-    darkslategray 90%
-  );
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, slategray 30%, white 50%, slategray 70%);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
   border-radius: 5px;
 }
 
 #slideshow::-webkit-scrollbar-thumb:hover {
   background: slategray;
-  background: linear-gradient(
-    90deg,
-    darkslategray 10%,
-    lightslategray 50%,
-    darkslategray 90%
-  );
-  box-shadow: inset 0 0 5px white;
+  background: linear-gradient(90deg, slategray 0%, white 50%, slategray 100%);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
 }
 
 .thumb img {
