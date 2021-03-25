@@ -179,6 +179,11 @@ function loadPicture(index) {
   $(`#${index} img`).css('transform', 'scale(1.1)');
   $(`#counter p`).css('color', 'slategray');
   $(`.${index}`).css('color', 'white');
+
+  let position = document.getElementById(`${index}`).offsetLeft;
+  document.getElementById(`slideshow`).scrollLeft =
+    position - window.innerWidth / 2 + 70;
+
   current = index;
 }
 
