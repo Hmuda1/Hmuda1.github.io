@@ -182,7 +182,7 @@ function loadPicture(index) {
 
   let position = document.getElementById(`${index}`).offsetLeft;
   document.getElementById(`slideshow`).scrollLeft =
-    position - window.innerWidth / 2 + 70;
+    position - window.innerWidth / 2 + 90;
 
   current = index;
 }
