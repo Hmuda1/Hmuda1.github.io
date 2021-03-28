@@ -166,19 +166,21 @@ function loadPicture(index) {
   $('#title').text(gallery[index].title);
   $('#blurb').text(gallery[index].blurb);
 
-  $('.thumb img').css('border', '0');
+  $('.thumb img').css('box-shadow', 'none');
   $('.thumb img').css('filter', 'grayscale(100%)');
   $('.thumb img').css('transform', 'scale(1)');
-  $(`#${index} img`).css('border', ' 3px solid white');
+  $(`#${index} img`).css('box-shadow', '0 0 1px 3px white');
   $(`#${index} img`).css('filter', 'grayscale(0%)');
   $(`#${index} img`).css('transform', 'scale(1.1)');
 
   $(`.hidden`).css('display', 'none');
-  $(`.hidden`).css('background', 'slategray');
+  $(`.hidden`).css('background', 'rgba(0, 128, 255, 0.5)');
   $(`.hidden`).css('color', 'white');
+  $(`.hidden`).css(`text-shadow`, `0 0 10px black,0 0 5px black,0 0 5px black`);
   $(`#${index} .hidden`).css('display', 'block');
   $(`#${index} .hidden`).css('background', 'white');
   $(`#${index} .hidden`).css('color', 'black');
+  $(`#${index} .hidden`).css(`text-shadow`, `none`);
 
   $(`#counter p`).css('color', 'black');
   $(`.${index}`).css('color', 'white');
