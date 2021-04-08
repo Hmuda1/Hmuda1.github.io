@@ -1,4 +1,5 @@
 body {
+  background: black;
   margin: 0;
   font-family: Montserrat;
 }
@@ -11,6 +12,10 @@ body {
   grid-template-rows: auto;
   column-gap: 30px;
   row-gap: 0px;
+}
+
+div p {
+  padding: 20px;
 }
 
 #container div {
@@ -43,12 +48,14 @@ body {
   margin: 0px 10px;
   text-decoration: none;
   color: rgb(150, 150, 150);
+  transition: all 0.25s;
 }
 
 #nav a:hover {
   font-weight: bold;
   color: rgb(255, 255, 255);
   box-shadow: inset 0 5px 0 rgb(200, 200, 255);
+  transition: all 0.25s;
 }
 
 #about {
@@ -63,6 +70,7 @@ body {
 }
 
 #resume {
+  background: white;
   grid-column: 1 /13;
   grid-row: auto;
 }
@@ -106,9 +114,10 @@ body {
 }
 
 .card {
-  background: rgb(255, 255, 255);
+  background: white;
   margin: 0;
   box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s;
 }
 
 .card img {
@@ -129,15 +138,17 @@ body {
 .card p {
   margin: 10px 20px;
   font-size: 16px;
+  padding: 0;
 }
 
 .card:hover {
-  transition: all 0.2s;
+  transition: all 0.25s;
   transform: scale(1.05);
   box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.15);
 }
 
 #skills {
+  background: white;
   grid-column: 1 /13;
   grid-row: auto;
 }
