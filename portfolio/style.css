@@ -97,11 +97,11 @@ div p {
   background-image: url(hero.jfif);
   background-size: 100vw;
   position: absolute;
-  top: 0;
+  top: -10vw;
   left: 50%;
   transform: translatex(-50vw);
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
 }
 
 #resume {
