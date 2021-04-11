@@ -84,10 +84,24 @@ div p {
   color: white;
   grid-column: var(--grid-column);
   grid-row: auto;
+  margin: 800px 0 0 0;
 }
 
-#about img {
+/* #about img {
   width: 100%;
+} */
+
+#about::before {
+  z-index: -1;
+  content: '';
+  background-image: url(hero.jfif);
+  background-size: 100vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translatex(-50vw);
+  width: 100vw;
+  height: 100vh;
 }
 
 #resume {
